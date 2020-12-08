@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head >
+    <body>
+        <div class="content">
+        <h1>Pools</h1>
+        <br/><br/>
+        <form method="POST" 
+          action="#" th:action="@{/modify}" th:object="${pool}">
+             <table class="formtable">
+                <tr style="display: none;">
+                    <td><label path="id">Id</label></td>
+                    <td><input path="id" th:field="*{id}" /></td>
+                </tr>
+                <tr>
+                    <td><label path="poolName">Pool Name</label></td>
+                    <td><input type="text" th:field="*{poolName}" /></td>
+                </tr>
+                <tr>
+                    <td><label path="poolType">Pool Type</label></td>
+                    <td><input type="text" th:field="*{poolType}"/></td>
+                </tr>
+                <tr>
+                    <td><label path="noPeople">Number of People</label></td>
+                    <td><input type="number" th:field="*{noPeople}"/></td>
+                </tr>  
+            </table>
+        <br/><br/>
+            <input type="submit" value="Submit"/>
+            <a href="pool">Cancel</a>
+        </form>
+        </div>
+    </body>
+</html>
