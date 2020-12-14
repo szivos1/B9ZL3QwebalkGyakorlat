@@ -1,12 +1,15 @@
 html {
   background-color: rgb(0, 0, 255);
-  color: rgb(255, 255, 255);
+  color: rgb(69, 69, 69);
   padding: 2cm;
+  background-image: url(img/wave.jpg);
+  background-repeat: repeat;
 }
 body {
   font-family: "Times New Roman", Times, serif;
   text-align: center;
-  background-image: url(wave.jpg);
+  color: rgb(69, 69, 69);
+
   
 }
 .content {
@@ -15,17 +18,18 @@ body {
 }
 .select {
   background-color: rgb(0, 128, 255);
-  border: solid 10px rgb(0, 20, 210);
-  color: rgb(255, 255, 255);
-  padding: 20px 20px;
+  border: solid 10px rgb(15, 105, 185);
+  color: rgb(69, 69, 69);
+  padding: 0px 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
 }
 
-img{
-    width: 40px;
-    height: 40px;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 

@@ -7,12 +7,12 @@
     </head>
     <body style="text-align: center;">
         <div class="content">
-        <h1 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
-        <a href="pool" class="select">Aquapark</a>
+        <h1 th:inline="text">You are signed in as [[${#httpServletRequest.remoteUser}]]!</h1>
+        <a href="pool" class="select" style="color: black">Aquapark</a>
         <br/>
         <br/>
         <form style="text-align: left;" th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input type="submit" style="bottom: 20px; right: 40px; position: absolute; height: 35px" value="Sign Out"/>
         </form>
         </div>
     </body>

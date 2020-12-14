@@ -8,43 +8,44 @@
    <body>
       <div class="content">
       <h1>Pools</h1>
-      <table class="indextable">
+      <table class="indextable" style="border: 1px solid black">
          <thead>
-            <tr>
-               <th>Pool Name</th>
-               <th>Pool Type</th>
-               <th>Number of people</th>
-               <th>Delete</th>
-               <th>Modify</th>
+            <tr style="border: 1px solid black">
+               <th style="border: 1px solid black">Pool Name</th>
+               <th style="border: 1px solid black">Pool Type</th>
+               <th style="border: 1px solid black">Number of people</th>
+               <th style="border: 1px solid black">Delete</th>
+               <th style="border: 1px solid black">Modify</th>
             </tr>
          </thead>
          <tbody>
-         <tr th:each="str : ${list}">                        
-            <td style="display: none;"th:text=${str.id}></td>
-            <td th:text=${str.poolName}></td>
-            <td th:text=${str.poolType}></td>
-            <td th:text=${str.noPeople}></td>
-            <td>
+         <tr th:each="str : ${list}" style="border: 1px solid black">                        
+            <td style="display: none; border: 1px solid black"th:text=${str.id}></td>
+            <td th:text=${str.poolName} style="border: 1px solid black"></td>
+            <td th:text=${str.poolType} style="border: 1px solid black"></td>
+            <td th:text=${str.noPeople} style="border: 1px solid black"></td>
+            <td style="border: 1px solid black">
             <form action="#" th:action="@{/delete=} + ${{str.id}}" method="get">
-               <button class="select" th:id="'table_entry_childs_button_' + ${str.id}" type="submit">
-                   <img src="../delete.jpg">
+               <button class="select" th:id="'table_entry_button_' + ${str.id}" type="submit">
+                   <img src="img/delete.jpg" style="width: 40px; height: 40px;">
                </button>
            </form>
            </td>
-           <td>
+           <td style="border: 1px solid black">
             <form action="#" th:action="@{/poolConfig=} + ${{str.id}}" method="get">
-               <button class="select" th:id="'table_entry_childs_button_' + ${str.id}" type="submit">
-                   <img src="../modify.png">
+               <button class="select" th:id="'table_entry_button_' + ${str.id}" type="submit">
+                   <img src="img/modify.png" style="width: 40px; height: 40px;">
                </button>
            </form>
            </td>
          </tr>
          </tbody>
       </table>
+      <p><img src="img/CatInPool.jpg" style="position:absolute; top:80px; right:80px; border: 3px solid #e3420e;"></p>
       <br/><br/>
-      <a href="poolConfig">Add pool</a>
+      <button onclick="document.location='poolConfig'">Add pool</button> 
       <br/><br/><br/>
-      <a href="home" style="float: left;">Homepage</a>
+      <button onclick="document.location='home'" style="bottom: 20px; right: 40px; position: absolute; height: 35px">Homepage</button> 
       </div>
    </body>
 

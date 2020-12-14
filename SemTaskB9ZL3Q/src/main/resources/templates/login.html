@@ -4,8 +4,17 @@
     <head>
         <title>Login</title>
         <link rel="stylesheet" href="style.css"/>
+        <style>
+    	body {
+    		
+  			text-align: left;
+    		}
+   		</style>
     </head>
-    <body style="text-align: left;">
+    
+    
+    
+    <body>
     	<div th:if="${param.error}">
             Invalid username and password.
         </div>
@@ -13,6 +22,15 @@
             You have been logged out.
         </div>
         <h1>Login</h1>
+        
+                <p>
+                <img src="img/WaterCat.jpg" style="position:absolute; width: 200px; height: 200px; top:80px; right:220px; border: 3px solid #e3420e;">
+         		<img src="img/slide.jpg" style="position:absolute; width: 200px; height: 200px; top:80px; right:429px; border: 3px solid #e3420e;">
+                <img src="img/aquapark.jpg" style="position:absolute; width: 300px; height: 200px; top:289px; right:270px; border: 3px solid #e3420e;">
+         
+                
+                </p>
+                
         <form th:action="@{/login}" method="post">
             <table>
             <tr>
@@ -26,6 +44,7 @@
             </table>
             <br/>
             <div><input type="submit" value="Sign In"/>
+            
         </form>
     </body>
 </html>
